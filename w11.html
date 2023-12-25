@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine.js Widget 11 Slider</title>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <style>
+        body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f8f8f8;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+      </style>
+      <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body x-data="{ price: 30 }">
+
+
+    <aside class="bg-gray-800 text-white h-screen">
+        <ul class="list-none p-0">
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w1.html" class="block hover:text-gray-300">Accordion</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w2.html" class="block hover:text-gray-300">Autocomplete</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w3.html" class="block hover:text-gray-300">Button</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w4.html" class="block hover:text-gray-300">Checkboxradio</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w5.html" class="block hover:text-gray-300">Controlgroup</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w6.html" class="block hover:text-gray-300">Datepicker</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w7.html" class="block hover:text-gray-300">Dialog</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w8.html" class="block hover:text-gray-300">Menu</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w9.html" class="block hover:text-gray-300">Progressbar</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w10.html" class="block hover:text-gray-300">Selectmenu</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w11.html" class="block hover:text-gray-300">Slider</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w12.html" class="block hover:text-gray-300">Spinner</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w13.html" class="block hover:text-gray-300">Tabs</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w14.html" class="block hover:text-gray-300">Tooltip</a>
+            </li>
+        </ul>
+    </aside>
+    
+
+
+    <div class="slider">
+        <input type="range" min="0" max="price" step="1" x-model="price">
+    </div>
+</body>
+</html>

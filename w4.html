@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine.js Widget 3 Buttons</title>
+    <style>
+        body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f8f8f8;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+    </style>
+      <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+</head>
+<body x-data="{ ronit: null }">
+
+    <aside class="bg-gray-800 text-white ">
+        <ul class="list-none p-0">
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w1.html" class="block hover:text-gray-300">Accordion</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w2.html" class="block hover:text-gray-300">Autocomplete</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w3.html" class="block hover:text-gray-300">Button</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w4.html" class="block hover:text-gray-300">Checkboxradio</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w5.html" class="block hover:text-gray-300">Controlgroup</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w6.html" class="block hover:text-gray-300">Datepicker</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w7.html" class="block hover:text-gray-300">Dialog</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w8.html" class="block hover:text-gray-300">Menu</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w9.html" class="block hover:text-gray-300">Progressbar</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w10.html" class="block hover:text-gray-300">Selectmenu</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w11.html" class="block hover:text-gray-300">Slider</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w12.html" class="block hover:text-gray-300">Spinner</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w13.html" class="block hover:text-gray-300">Tabs</a>
+            </li>
+            <li class="py-2 px-4 border-b border-gray-700">
+                <a href="./w14.html" class="block hover:text-gray-300">Tooltip</a>
+            </li>
+        </ul>
+    </aside>
+
+
+
+    <div>
+        <h2 class="text-2xl py-2">Radio Group</h2>
+        <fieldset x-data="{clickedButton: null}" class="border p-3">
+        <legend>Select a Location</legend>
+        <label @click="clickedButton = 'button1'" class="radiobtn cursor-pointer"
+        x-bind:class="{'backgr hover:bg-green-500': clickedButton === 'button1'}"><input
+        type="radio" name="location" class="mr-1" />New Delhi</label>
+        <label @click="clickedButton = 'button2'" class="radiobtn ml-1 cursor-pointer"
+        x-bind:class="{'backgr hover:bg-green-500': clickedButton === 'button2'}"><input
+        type="radio" name="location" class="mr-1" />Mumbai</label>
+        <label @click="clickedButton = 'button3'" class="radiobtn ml-1 cursor-pointer"
+        x-bind:class="{'backgr hover:bg-green-500': clickedButton === 'button3'}"><input
+        type="radio" name="location" class="mr-1" />Chennai</label>
+        </fieldset>
+        </div>
+       
+        <div>
+        <h2 class="text-2xl py-2">Checkbox</h2>
+        <fieldset class="border p-3">
+        <legend>Hotel Ratings</legend>
+        <div x-data="{isActive: false}" @click="isActive = !isActive"
+        class="border px-3 py-2 inline-block hover:bg-green-100 cursor-pointer"
+        :class="{'backgr hover:bg-green-500': isActive}"><input type="checkbox"
+        name="location" class="mr-1" :checked="isActive" />2 Star</div>
+        <div x-data="{isActive: false}" @click="isActive = !isActive"
+        class="border px-3 py-2 inline-block ml-1 hover:bg-green-100 cursor-pointer"
+        :class="{'backgr hover:bg-green-500': isActive}"><input type="checkbox"
+        name="location" class="mr-1" x-bind:checked="isActive" />3 Star</div>
+        <div x-data="{isActive: false}" @click="isActive = !isActive"
+        class="border px-3 py-2 inline-block ml-1 hover:bg-green-100 cursor-pointer"
+        :class="{'backgr hover:bg-green-500': isActive}"><input type="checkbox"
+        name="location" class="mr-1" :checked="isActive" />4 Star</div>
+        <div x-data="{isActive: false}" @click="isActive = !isActive"
+        class="border px-3 py-2 inline-block ml-1 hover:bg-green-100 cursor-pointer"
+        :class="{'backgr hover:bg-green-500': isActive}"><input type="checkbox"
+        name="location" class="mr-1" :checked="isActive" />5 Star</div>
+        </fieldset>
+        </div>
+    </div>
+
+</body>
+</html>
